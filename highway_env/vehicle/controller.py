@@ -197,7 +197,7 @@ class ControlledVehicle(Vehicle):
         """
         #return self.KP_A * (target_speed - self.speed)
         acceleration = self.KP_A * (target_speed - self.speed)
-        return np.clip(acceleration, -1.0, 1.0)  # 限制加速度范围到 [-1.0, 1.0] m/s²
+        return np.clip(acceleration, -1.0, 1.0)  # restrict the acceleration to range [-1.0, 1.0] m/s²
 
 
     def get_routes_at_intersection(self) -> List[Route]:
